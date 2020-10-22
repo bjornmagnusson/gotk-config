@@ -1,8 +1,0 @@
-apiVersion: source.toolkit.fluxcd.io/v1beta1
-kind: HelmRepository
-metadata:
-  name: codefresh
-  namespace: gotk-system
-spec:
-  interval: 1m
-  url: https://h.cfcr.io/bjornmagnusson/default
