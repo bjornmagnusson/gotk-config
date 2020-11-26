@@ -44,7 +44,7 @@ metadata:
   name: regionalmap
   namespace: flux-system
 spec:
-  eventSeverity: error
+  eventSeverity: info
   eventSources:
   - kind: HelmRelease
     namespace: regionalmap
