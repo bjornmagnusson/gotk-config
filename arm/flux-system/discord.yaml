@@ -28,11 +28,12 @@ apiVersion: notification.toolkit.fluxcd.io/v1beta1
 kind: Alert
 metadata:
   name: express-demo
-  namespace: express-demo
+  namespace: flux-system
 spec:
   eventSeverity: info
   eventSources:
   - kind: HelmRelease
+    namespace: express-demo
     name: express-demo
   providerRef:
     name: discord
@@ -41,11 +42,12 @@ apiVersion: notification.toolkit.fluxcd.io/v1beta1
 kind: Alert
 metadata:
   name: regionalmap
-  namespace: regionalmap
+  namespace: flux-system
 spec:
   eventSeverity: error
   eventSources:
   - kind: HelmRelease
+    namespace: regionalmap
     name: regionalmap
   providerRef:
     name: discord
