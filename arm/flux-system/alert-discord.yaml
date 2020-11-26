@@ -11,4 +11,29 @@ spec:
     name: flux-system
   providerRef:
     name: discord
-
+---
+apiVersion: notification.toolkit.fluxcd.io/v1beta1
+kind: Alert
+metadata:
+  name: express-demo
+  namespace: express-demo
+spec:
+  eventSeverity: info
+  eventSources:
+  - kind: HelmRelease
+    name: express-demo
+  providerRef:
+    name: discord
+---
+apiVersion: notification.toolkit.fluxcd.io/v1beta1
+kind: Alert
+metadata:
+  name: regionalmap
+  namespace: regionalmap
+spec:
+  eventSeverity: error
+  eventSources:
+  - kind: HelmRelease
+    name: regionalmap
+  providerRef:
+    name: discord
