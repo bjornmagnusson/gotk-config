@@ -1,0 +1,12 @@
+---
+apiVersion: notification.toolkit.fluxcd.io/v1beta1
+kind: Provider
+metadata:
+  name: dev
+  namespace: flux-system
+spec:
+  address: https://discordapp.com/api/webhooks/781589130193797130/04GEELZcDTn4ewBbtwWEg2GIifrKAzTEyZUw8jFOtAMlz5yxzCU_xxZvqa2_OazdLSup
+  channel: gitops
+  type: discord
+  username: flux
+
