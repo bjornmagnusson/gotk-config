@@ -5,7 +5,7 @@ metadata:
   name: all-to-discord
   namespace: flux-system
 spec:
-  eventSeverity: info
+  eventSeverity: error
   eventSources:
   - kind: Kustomization
     name: flux-system
