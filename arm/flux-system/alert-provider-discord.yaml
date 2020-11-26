@@ -2,11 +2,11 @@
 apiVersion: notification.toolkit.fluxcd.io/v1beta1
 kind: Provider
 metadata:
-  name: dev
+  name: discord
   namespace: flux-system
 spec:
   channel: gitops
   type: discord
   username: flux
   secretRef:
-    name: discord-dev
+    name: discord
