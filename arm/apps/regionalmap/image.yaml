@@ -1,0 +1,28 @@
+---
+apiVersion: image.toolkit.fluxcd.io/v1alpha1
+kind: ImageRepository
+metadata:
+  name: regionalmap
+  namespace: flux-system
+spec:
+  image: bjornmagnusson/regionalmap
+  interval: 1m0s
+
+---
+apiVersion: image.toolkit.fluxcd.io/v1alpha1
+kind: ImageUpdateAutomation
+metadata:
+  name: regionalmap
+  namespace: flux-system
+spec:
+  checkout:
+    branch: main
+    gitRepositoryRef:
+      name: flux-system
+  commit:
+    authorEmail: ""
+    authorName: ""
+  interval: 1m0s
+  update:
+    setters: {}
+
