@@ -24,7 +24,7 @@ spec:
     authorName: ""
   interval: 1m0s
   update:
-    setters: {}
+    strategy: Setters
 
 ---
 apiVersion: image.toolkit.fluxcd.io/v1alpha1
