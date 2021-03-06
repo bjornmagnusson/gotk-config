@@ -1,8 +1,7 @@
-VERSION=$1
+VERSION=$(flux --version | cut -d" " -f3)
 
 echo "Upgrading Flux2 toolkit to $VERSION"
 flux install \
---version=$VERSION \
 --components-extra image-reflector-controller,image-automation-controller \
 --export > arm/flux-system/gotk-components.yaml
 
